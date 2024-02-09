@@ -71,12 +71,16 @@ form {
   align-items: center;
 }
 
+.email-wrapper {
+  width: 100%;
+  max-width: 30rem;
+}
+
 #email-input {
   display: block;
   width: 100%;
   border-radius: 30px;
   padding: .7rem;
-  margin-bottom: .7rem;
   border: 1px solid var(--blue);
   max-width: 30rem;
 }
@@ -136,6 +140,18 @@ a:hover .icon {
   font-size: .8rem;
 }
 
+#email-error {
+  margin: .3rem 0 1rem 1rem;
+  text-align: left;
+  color: var(--light-red);
+  font-style: italic;
+  font-size: .9rem;
+}
+
+.input-error {
+  border: 1px solid var(--light-red) !important;
+}
+
 @media (min-width: 55em) {
   .logo {
     width: 5rem;
@@ -147,10 +163,16 @@ a:hover .icon {
 
   form {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
     justify-content: center;
+    align-items: flex-start;
     margin-bottom: 4rem;
     min-width: 50%;
+  }
+
+  .email-wrapper {
+    width: 25rem;
   }
 
   #email-input {
@@ -160,7 +182,7 @@ a:hover .icon {
 
   .notify-button {
     margin: 0;
-    width: 100%;
+    width: 8rem;
   }
   
   .notify-button:hover {

@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="index.css">
+  <script defer src="index.js"></script>
   
   <title>Frontend Mentor | Ping coming soon page</title>
 
@@ -23,9 +24,12 @@
 
       <p class="description">Subscribe and get notified</p>
 
-      <form>
-        <label for="email-input" class="sr-only">Email Address</label>
-        <input id="email-input" type="email" placeholder="Your email address..." />
+      <form novalidate>
+        <div class="email-wrapper">
+          <label for="email-input" class="sr-only">Email Address</label>
+          <input id="email-input" type="email" placeholder="Your email address..." />
+          <p id="email-error" class="sr-only">please fix the error message</p>
+        </div>
         <button class="notify-button">Notify Me</button>
       </form>
 
