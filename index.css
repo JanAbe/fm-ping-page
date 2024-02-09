@@ -1,0 +1,173 @@
+@import "reset.css";
+
+@font-face {
+  font-family: "Libre_Franklin";
+  src: url("assets/fonts/Libre_Franklin/LibreFranklin-VariableFont_wght.ttf");
+}
+
+:root {
+  --blue: hsl(223, 87%, 63%);
+
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+}
+
+body {
+  font-family: "Libre_Franklin", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  margin: 1.5rem;
+  flex-grow: 1;
+}
+
+.logo {
+  margin-bottom: 1.5rem;
+  width: 4rem;
+}
+
+.title {
+  color: var(--gray);
+  font-weight: 300;
+  font-size: 1.9rem;
+}
+
+.title strong {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+}
+
+.description {
+  margin-bottom: 3rem;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#email-input {
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+  padding: .7rem;
+  margin-bottom: .7rem;
+  border: 1px solid var(--blue);
+  max-width: 30rem;
+}
+
+#email-input::placeholder {
+  opacity: 30%;
+}
+
+.notify-button {
+  width: 100%;
+  max-width: 30rem;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: .7rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 10px hsl(223, 87%, 63%, 20%);
+}
+
+footer {
+  margin-top: auto;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+li a {
+  display: grid;
+  place-content: center;
+  height: 1.3rem;
+  width: 1.3rem;
+  padding: 1rem;
+  border: 2px solid #EBEEF3;
+  border-radius: 50%;
+}
+
+li a:hover {
+  background-color: var(--blue);
+}
+
+a:hover .icon {
+  fill: white;
+}
+
+.icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: var(--blue);
+}
+
+.copyright {
+  color: var(--gray);
+  font-size: .8rem;
+}
+
+@media (min-width: 55em) {
+  .logo {
+    width: 5rem;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+
+  form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+    min-width: 50%;
+  }
+
+  #email-input {
+    margin: 0;
+    width: 100%;
+  }
+
+  .notify-button {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .notify-button:hover {
+    cursor: pointer;
+  }
+
+  .dashboard-img {
+    max-width: 50%;
+  }
+}
